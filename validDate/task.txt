@@ -1,0 +1,67 @@
+What do we know about Professor Boolean's past? It's mostly rumor and conjecture, but a few things are known to be true.
+
+Mad Professor Boolean wasn't always a super villain. Early in his career, he was an average paper pusher, working in an office with some very backwards technology. One of his primary jobs was to carry date cards between departments. One morning, he tripped over a unicycle and dropped his date cards on the floor. He hit his head — and hit upon the idea of breeding an army of zombie rabbits to do his bidding and manage simple tasks. But that comes later. Before he could quit with an explosive YouTube video, the professor had to get his cards back in order.
+
+Aha! It seems he recorded the details of this life-changing event in his diary. Let's try to reproduce his methods:
+
+The goal is to get the date cards back in order. Each set of date cards consists of 3 cards, each with a number written on it. When arranged in some order, the numbers make up the representation of a date, in the form month/day/year. However, sometimes multiple representations will be possible. For example, if the date cards read 1, 1, 99 it could only mean 01/01/99, but if the date cards read 2, 30, 3, it could mean any one of 02/03/30, 03/02/30, or 03/30/02.
+
+Write a function called answer(x, y, z) that takes as input the 3 numbers on the date cards. You may assume that at least one valid representation of a date can be constructed from the cards.
+
+If there is only one valid representation, the function should return it as a string, in the form MM/DD/YY. If there are multiple valid representations, the function should return the string «Ambiguous.» Each of x, y, z will be between 1 to 99 inclusive. You may also assume that there are no leap years.
+
+Languages
+=========
+
+To provide a Python solution, edit solution.py
+To provide a Java solution, edit solution.java
+
+Test cases
+==========
+
+Inputs:
+(int) x = 19
+(int) y = 19
+(int) z = 3
+Output:
+(string) «03/19/19»
+
+Inputs:
+(int) x = 2
+(int) y = 30
+(int) z = 3
+Output:
+(string) «Ambiguous»
+
+---------------- ПЕРЕВОД ----------------
+
+Что мы знаем о прошлом профессора Булева?? В основном это слухи и домыслы, но несколько вещей мы знаем точно.
+
+Безумный профессор Булев не всегда был супер-злодеем. В начале своей карьеры, он был обычным бумажным клерком, работающим в офисе с какой-то очень отсталой технологией.
+Одной из его важнейших задач была носить карточки с датами между отделами. В одно утро, он споткнулся об обноколесный велосипед и уронил карточки на пол.
+Он ударился головой - и его озарила идея разведения армии зомби-кроликов для того чтобы выполнять его поручения и управлять простыми задачами.
+Но это будет позже. До того как он смог поразить YouTube со своим взрывным видео, профессор должен был привести в порядок свои карточки.
+
+Ага! Похоже, он записал подробности этого изменившего его жизнь события в своем дневнике. Попробуем воспроизвести его метод:
+
+Цель состоит в том, чтобы вернуть карточки с датами в порядок. Каждый набор состоит из трех карт, на каждой из которых написан номер. Расположенные в некоторой последовательности, эти номера образуют собой ДАТУ, в формате месяц/день/год. Однако, иногда могут быть возможны множественные комбинации. Для примера, если набор состоит из чисел 1, 1, 99 - это может означать только одну дату 1/1/99.
+Но если нам попались карточки с числами 2, 30, 3 - то мы не можем однозначно сказать какую дату они представляют 02/03/30, 03/02/30, или 03/30/02.
+
+Напишите функцию answer(x, y, z), которая принимает три числа (тех что на катрочках дат, от 1 до 99). Вы можете предполагать что по крайней мере одно валидное представление даты может быть построено из этих карточек.
+Если существует только одно валидное представление даты из мереданных чисел, функция должна вернуть его ввиде строки MM/DD/YY. Если существует множественные комбинации из этих чисел, представляющие валидную дату, функция должна вернуть строку «Ambiguous.». Каждый из входных параметром x, y, z должен быть целым числом от 1 до 99 включительно. Вы также можете пренебречь високосными годами.
+
+
+MY TEST CASES
+=============
+
+1 1 1 - 1/1/1
+12 12 12 - 12/12/12
+13 13 13 - Ambiguous
+12 12 31 - Ambiguous
+11 11 31 - 11/11/31
+2 3 29 - Ambiguous
+2 15 29 - Ambiguous
+2 13 29 - 2/13/29
+6 6 13 - Ambiguous
+6 13 13 - 6/13/13
+6 31 13 - 6/13/31
